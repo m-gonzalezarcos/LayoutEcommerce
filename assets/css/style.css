@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+}
+
+.grid-container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-areas: 'nav nav nav' 'aside main main' 'footer footer footer';
+}
+
+/* NAEGACIÓN */
+nav {
+    grid-area: nav;
+    background-color: #144781;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 300;
+}
+
+nav h2 {
+    font-family: 'Roboto', sans-serif;
+    color:#ffffff;
+}
+
+/* ASIDE */
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #d8d8d8;
+    padding: 0 10px;
+}
+
+aside h3 {
+    font-family: 'Roboto', sans-serif;
+    color:#6f6f6f;
+    font-weight: 400;
+    margin-left: 20px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+aside li {
+    font-family:'Roboto', sans-serif;
+    font-weight: 400;
+    margin-left: 20px;
+    color:#656565;
+    line-height: 25px;
+    list-style: none;
+}
+
+aside li span {
+    color: rgba(101, 101, 101, 0.7);
+}
+
+/* MAIN */
+main {
+    grid-area: main;
+    background-color: #d8d8d8;
+    padding: 10px 0;
+}
+
+.container-productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.productos {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;/* cuando cambiamos el eje horizontal a vertical con la propiedad flex direction: column; la propiedad align-items pasa a ser el eje horizontal y justify-content el eje vertical. */
+    align-items: center;
+}
+
+.productos img {
+    width: 100%;
+    max-width: 450px;
+}
+
+.productos h4 {
+    font-family: 'Roboto', sans-serif;
+    color:#6f6f6f;
+    padding-bottom: 10px;
+}
+
+.productos small {
+    font-family:'Roboto', sans-serif;
+    font-weight: 400;
+    color:#656565;   
+}
+
+.productos button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #144781;
+}
+
+.productos button a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    color:#ffffff;
+    text-decoration: none;
+}
+
+.productos button:hover {
+    background-color: rgb(20, 71, 129, 0.8);
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    grid-area: footer;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 15px;
+}
+
+footer small {
+    font-family: 'Roboto';
+    color:#838383;
+}
+
